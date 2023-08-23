@@ -4,7 +4,7 @@
 
 Your dotfiles are how you personalize your system. This repository holds all of my system dotfiles for my MacOS and program personalize configs I use. you may discover color schemes and fonts used by all of the program. [Go to this repository](https://github.com/nipunravisara/scripts) to find my scripts that oftently use with my window manager.
 
-![yabai-macos-setup](https://raw.githubusercontent.com/nipunravisara/dots/master/.local/screenshots/ss0.png)
+![yabai-macos-setup](https://raw.githubusercontent.com/nipunravisara/dotfiles/main/.local/screenshots/ss0.png)
 
 ## What's inside
 
@@ -30,8 +30,8 @@ bash <(curl -sL https://gist.github.com/nipunravisara/77cd3908fad48799011c37ba21
 
 ## Screenshots
 
-![yabai-macos-setup](https://raw.githubusercontent.com/nipunravisara/dots/master/.local/screenshots/ss1.png)
-![yabai-macos-setup](https://raw.githubusercontent.com/nipunravisara/dots/master/.local/screenshots/ss2.png)
+![yabai-macos-setup](https://raw.githubusercontent.com/nipunravisara/dotfiles/main/.local/screenshots/ss1.png)
+![yabai-macos-setup](https://raw.githubusercontent.com/nipunravisara/dotfiles/main/.local/screenshots/ss2.png)
 <br/>
 <br/>
 <div align="center">
