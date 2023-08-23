@@ -1,6 +1,7 @@
-# Dots
+# Dotfiles
 
-![](https://img.shields.io/badge/-Gnu-informational?style=flat&logo=GNU&logoColor=white&color=A42E2B) ![](https://img.shields.io/badge/-Linux-informational?style=flat&logo=Linux&logoColor=white&color=000000) ![](https://img.shields.io/badge/-Arch-informational?style=flat&logo=Arch-Linux&logoColor=white&color=1793D1) ![](https://img.shields.io/badge/-Xorg-informational?style=flat&logo=X.Org&logoColor=white&color=F28834) ![](https://img.shields.io/badge/-ZSH-informational?style=flat&logo=gnu-bash&logoColor=white&color=C97E84) ![](https://img.shields.io/badge/-Vim-informational?style=flat&logo=neovim&message="Neovim"&logoColor=white&color=019733) ![](https://img.shields.io/github/stars/nipunravisara/dots-x2) ![](https://img.shields.io/github/forks/nipunravisara/dots-x2?color=teal)
+![](https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=apple&logoColor=white) ![](https://img.shields.io/badge/tmux-1BB91F?style=for-the-badge&logo=tmux&logoColor=white) ![](https://img.shields.io/badge/alacritty-F46D01?style=for-the-badge&logo=alacritty&logoColor=white) ![](https://img.shields.io/badge/NeoVim-%2357A143.svg?&style=for-the-badge&logo=neovim&logoColor=white) 
+
 
 Your dotfiles are how you personalize your system. This repository holds all of my system dotfiles for my MacOS and program personalize configs I use. you may discover color schemes and fonts used by all of the program. [Go to this repository](https://github.com/nipunravisara/scripts) to find my scripts that oftently use with my window manager.
 
