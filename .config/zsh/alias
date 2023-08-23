@@ -1,0 +1,33 @@
+#--------------------------#
+# ----- System Alias ----- #
+# ------------------------ #
+
+alias unix="curl -L http://git.io/unix"
+
+# Applications
+alias v="nvim"
+alias u="udisksctl unmount -b"
+alias m="udisksctl mount -b"
+alias r="ranger"
+
+# Controls 
+alias dot="/usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME"
+alias q="exit"
+
+# NPM
+alias np="npm publish"
+alias ni="npm i"
+alias ms="npm start --reste-cache"
+alias android="npm run android"
+alias ios="npm run ios"
+
+# Android
+alias clean="cd android && ./gradlew clean && cd ../"
+alias build="cd android && ./gradlew assembleRelease && cd ../"
+alias sign-apk="/Users/nipun/Library/Android/sdk/build-tools/32.0.0/apksigner sign -ks /Users/nipun/devx/apps/du-customer/android/app/du-customer.keystore --v2-signing-enabled true --v3-signing-enabled true"
+alias verify-apk="/Users/nipun/Library/Android/sdk/build-tools/32.0.0/apksigner verify --verbose"
+
+# Docker
+alias dcb="docker-compose build"
+alias dcu="docker-compose up"
+alias dcd="docker-compose down"

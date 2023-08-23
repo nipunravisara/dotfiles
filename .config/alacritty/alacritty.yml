@@ -1,0 +1,47 @@
+# import:
+#   - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
+
+import:
+  - ~/.cache/wal/colors.yml
+
+cursor:
+  style: Block
+
+window:
+  dimensions:
+    columns: 0
+    lines: 1
+
+scrolling:
+  auto_scroll: true
+
+font:
+  normal:
+    family: "Terminess Nerd Font Mono"
+    style: Regular
+
+  bold:
+    family: "Terminess Nerd Font Mono"
+    style: Bold
+    
+  italic:
+    family: "Terminess Nerd Font Mono"
+    style: Italic     
+
+  size: 16.0
+    
+  offset:
+    x: 0
+    y: 0
+
+window:
+  padding:
+    x: 25
+    y: 25
+
+  dynamic_padding: true
+  decorations: buttonless
+  opacity: 0.9
+
+live_config_reload: true
+

@@ -1,0 +1,16 @@
+[user]
+	email = ravisara.dev@gmail.com
+	name = Nipun Ravisara
+
+[includeIf "gitdir:~/devx/"]
+    path = ~/devx/.gitconfig
+
+[alias]
+	st = status
+	ck = checkout
+	co = commit -m
+	br = branch
+
+[http]
+	postBuffer = 157286400
+	sslVerify = false
