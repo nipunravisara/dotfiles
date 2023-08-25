@@ -15,10 +15,6 @@
 		<img alt="Repo Size" src="https://img.shields.io/github/repo-size/nipunravisara/dotfiles?color=%23DDB6F2&label=SIZE&logo=codesandbox&style=for-the-badge&logoColor=D9E0EE&labelColor=302D41"/></a>
 </p>
 
-
-
-
-
 Your dotfiles are how you personalize your system. This repository holds all of my system dotfiles for my MacOS and program personalize configs I use. you may discover color schemes and fonts used by all of the program. [Go to this repository](https://github.com/nipunravisara/scripts) to find my scripts that oftently use with my window manager.
 
 ![yabai-macos-setup](https://raw.githubusercontent.com/nipunravisara/dotfiles/main/.local/screenshots/ss0.png)
