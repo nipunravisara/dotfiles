@@ -1,5 +1,3 @@
-<!--![](https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=apple&logoColor=white) ![](https://img.shields.io/badge/tmux-1BB91F?style=for-the-badge&logo=tmux&logoColor=white) ![](https://img.shields.io/badge/alacritty-F46D01?style=for-the-badge&logo=alacritty&logoColor=white) ![](https://img.shields.io/badge/NeoVim-%2357A143.svg?&style=for-the-badge&logo=neovim&logoColor=white) -->
-
 <p align="center">
   <h2 align="center">Dotfiles</h2>
 </p>
@@ -22,6 +20,7 @@ Your dotfiles are how you personalize your system. This repository holds all of 
 
 ![yabai-macos-setup](https://raw.githubusercontent.com/nipunravisara/dotfiles/main/.local/screenshots/ss0.png)
 
+
 ## What's inside
 
 - **zsh**: interactive login shell and as a command interpreter.
@@ -33,6 +32,7 @@ Your dotfiles are how you personalize your system. This repository holds all of 
 - **ranger**: vim-inspired filemanager.
 - **nvim**: hyperextensible Vim-based text editor.
 
+
 ## Getting started
 
 If you're planning to install and setup above packages and personalize it as you want it's gonna take time. I have setup a [installation script](https://gist.github.com/nipunravisara/77cd3908fad48799011c37ba21050c63) for easy use. after setup you can configure each package as you want by editing config files located inside `.config/<package-name>`.
@@ -41,7 +41,7 @@ If you're planning to install and setup above packages and personalize it as you
 bash <(curl -sL https://gist.github.com/nipunravisara/77cd3908fad48799011c37ba21050c63/raw/setup.sh)
 ```
 
-> [!WARNING]  
+> [!IMPORTANT]  
 > if you want to give this script a try, you should first fork this gits, review the code, and remove things you don’t want specially gitconfig and zprofile.
 
 ## Screenshots
