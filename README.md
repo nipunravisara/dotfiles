@@ -16,6 +16,9 @@
 </p>
 
 
+
+
+
 Your dotfiles are how you personalize your system. This repository holds all of my system dotfiles for my MacOS and program personalize configs I use. you may discover color schemes and fonts used by all of the program. [Go to this repository](https://github.com/nipunravisara/scripts) to find my scripts that oftently use with my window manager.
 
 ![yabai-macos-setup](https://raw.githubusercontent.com/nipunravisara/dotfiles/main/.local/screenshots/ss0.png)
