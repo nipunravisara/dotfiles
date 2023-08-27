@@ -18,4 +18,3 @@ source $HOME/.config/zsh/alias
 
 # Envs
 source $HOME/.config/zsh/envs
-

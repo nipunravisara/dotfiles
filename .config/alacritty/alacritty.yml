@@ -1,8 +1,5 @@
-# import:
-#   - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
-
 import:
-  - ~/.cache/wal/colors.yml
+  - ~/.config/alacritty/colors.yml
 
 cursor:
   style: Block
