@@ -1,11 +1,24 @@
-# Dotfiles
+<p align="center">
+  <h2 align="center">Dotfiles</h2>
+</p>
 
-![](https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=apple&logoColor=white) ![](https://img.shields.io/badge/tmux-1BB91F?style=for-the-badge&logo=tmux&logoColor=white) ![](https://img.shields.io/badge/alacritty-F46D01?style=for-the-badge&logo=alacritty&logoColor=white) ![](https://img.shields.io/badge/NeoVim-%2357A143.svg?&style=for-the-badge&logo=neovim&logoColor=white) 
+<p align="center">
+	personalized system files
+</p>
 
+<p align="center">
+	<a href="https://github.com/nipunravisara/dotfiles/stargazers">
+		<img alt="Stars" src="https://img.shields.io/github/stars/nipunravisara/dotfiles?style=for-the-badge&logo=starship&color=C9CBFF&logoColor=D9E0EE&labelColor=302D41"></a>
+	<a href="https://github.com/nipunravisara/dotfiles/issues">
+		<img alt="Issues" src="https://img.shields.io/github/issues/nipunravisara/dotfiles?style=for-the-badge&logo=bilibili&color=F5E0DC&logoColor=D9E0EE&labelColor=302D41"></a>
+	<a href="https://github.com/nipunravisara/dotfiles">
+		<img alt="Repo Size" src="https://img.shields.io/github/repo-size/nipunravisara/dotfiles?color=%23DDB6F2&label=SIZE&logo=codesandbox&style=for-the-badge&logoColor=D9E0EE&labelColor=302D41"/></a>
+</p>
 
 Your dotfiles are how you personalize your system. This repository holds all of my system dotfiles for my MacOS and program personalize configs I use. you may discover color schemes and fonts used by all of the program. [Go to this repository](https://github.com/nipunravisara/scripts) to find my scripts that oftently use with my window manager.
 
 ![yabai-macos-setup](https://raw.githubusercontent.com/nipunravisara/dotfiles/main/.local/screenshots/ss0.png)
+
 
 ## What's inside
 
@@ -18,6 +31,7 @@ Your dotfiles are how you personalize your system. This repository holds all of 
 - **ranger**: vim-inspired filemanager.
 - **nvim**: hyperextensible Vim-based text editor.
 
+
 ## Getting started
 
 If you're planning to install and setup above packages and personalize it as you want it's gonna take time. I have setup a [installation script](https://gist.github.com/nipunravisara/77cd3908fad48799011c37ba21050c63) for easy use. after setup you can configure each package as you want by editing config files located inside `.config/<package-name>`.
@@ -26,7 +40,7 @@ If you're planning to install and setup above packages and personalize it as you
 bash <(curl -sL https://gist.github.com/nipunravisara/77cd3908fad48799011c37ba21050c63/raw/setup.sh)
 ```
 
-> [!WARNING]  
+> [!IMPORTANT]  
 > if you want to give this script a try, you should first fork this gits, review the code, and remove things you don’t want specially gitconfig and zprofile.
 
 ## Screenshots
