@@ -17,6 +17,7 @@ font:
     family: "Terminess Nerd Font Mono"
     style: Regular
 
+
   bold:
     family: "Terminess Nerd Font Mono"
     style: Bold
@@ -38,7 +39,7 @@ window:
 
   dynamic_padding: true
   decorations: buttonless
-  opacity: 0.9
+  opacity: 1
 
 live_config_reload: true
 

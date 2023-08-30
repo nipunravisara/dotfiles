@@ -15,6 +15,7 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'                  -- package manager
     use 'nvim-tree/nvim-tree.lua'                 -- file explorer
     use 'nvim-tree/nvim-web-devicons'             -- file icons
+    use 'lukas-reineke/indent-blankline.nvim'     -- indentation guides
     use 'mbbill/undotree'                         -- manage undo history
     use 'nvim-lualine/lualine.nvim'               -- status bar
     use 'williamboman/mason-lspconfig.nvim'
