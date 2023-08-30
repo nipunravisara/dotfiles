@@ -39,7 +39,7 @@ window:
 
   dynamic_padding: true
   decorations: buttonless
-  opacity: 1
+  opacity: 0.95
 
 live_config_reload: true
 
