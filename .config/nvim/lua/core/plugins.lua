@@ -21,6 +21,7 @@ return require('packer').startup(function(use)
   use 'morgsmccauley/vim-react-native-snippets' -- react-native-snippets
   use 'SirVer/ultisnips'                        -- react ts snippets
   use 'mlaursen/vim-react-snippets'             -- react ts snippets
+  use 'wuelnerdotexe/vim-astro'                 -- astro syntax support
   use 'neoclide/vim-jsx-improve'                -- jsx support
   use 'windwp/nvim-ts-autotag'                  -- auto tags
   use 'windwp/nvim-autopairs'                   --  auto pairs
@@ -28,7 +29,13 @@ return require('packer').startup(function(use)
   use 'lewis6991/gitsigns.nvim'                 -- git signs
   use { "catppuccin/nvim", as = "catppuccin" }  -- color theme
   use {
-    'williamboman/mason.nvim',                  -- LSP servers
+    'antonk52/markdowny.nvim',
+    config = function()
+      require('markdowny').setup()
+    end
+  }
+  use {
+    'williamboman/mason.nvim', -- LSP servers
     'williamboman/mason-lspconfig.nvim',
     run = ":MasonUpdate"
   }
@@ -50,6 +57,12 @@ return require('packer').startup(function(use)
       { 'L3MON4D3/LuaSnip' },      -- autocompletion
     }
   }
+
+  -- flutter
+  use 'dart-lang/dart-vim-plugin'
+  use 'thosakwe/vim-flutter'
+  use 'natebosch/vim-lsc'
+  use 'natebosch/vim-lsc-dart'
 
   if packer_bootstrap then
     require('packer').sync()
