@@ -21,6 +21,11 @@ alias ms="npm start --reste-cache"
 alias android="npm run android"
 alias ios="npm run ios"
 
+# Flutter
+alias ff="fvm flutter"
+alias f="flutter"
+
+
 # Android
 alias clean="cd android && ./gradlew clean && cd ../"
 alias build="cd android && ./gradlew assembleRelease && cd ../"

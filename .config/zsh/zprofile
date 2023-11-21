@@ -25,7 +25,7 @@ export PATH=$PATH:$HOME/aseprite/build/bin
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home
 
 # Flutter
-export PATH="$PATH:$HOME/flutter/bin"
+export PATH="$PATH:$HOME/fvm/default/bin"
 
 # Pywal
 export PATH=$PATH:/opt/homebrew/lib/python3.11/site-packages
