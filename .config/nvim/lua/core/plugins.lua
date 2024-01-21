@@ -28,6 +28,7 @@ return require('packer').startup(function(use)
   use 'jose-elias-alvarez/null-ls.nvim'         -- formatter util
   use 'lewis6991/gitsigns.nvim'                 -- git signs
   use { "catppuccin/nvim", as = "catppuccin" }  -- color theme
+  use 'justinmk/vim-sneak'                      -- vim sneak
   use {
     'antonk52/markdowny.nvim',
     config = function()
@@ -37,6 +38,7 @@ return require('packer').startup(function(use)
   use {
     'williamboman/mason.nvim', -- LSP servers
     'williamboman/mason-lspconfig.nvim',
+    'neovim/nvim-lspconfig',
     run = ":MasonUpdate"
   }
   use {
@@ -59,10 +61,10 @@ return require('packer').startup(function(use)
   }
 
   -- flutter
-  use 'dart-lang/dart-vim-plugin'
-  use 'thosakwe/vim-flutter'
-  use 'natebosch/vim-lsc'
-  use 'natebosch/vim-lsc-dart'
+  -- use 'dart-lang/dart-vim-plugin'
+  -- use 'thosakwe/vim-flutter'
+  -- use 'natebosch/vim-lsc'
+  -- use 'natebosch/vim-lsc-dart'
 
   if packer_bootstrap then
     require('packer').sync()
