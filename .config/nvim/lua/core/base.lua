@@ -5,9 +5,6 @@ vim.scriptencoding = 'utf-8'
 vim.opt.encoding = 'utf-8'
 vim.opt.fileencoding = 'utf-8'
 
--- Line numbers
-vim.wo.number = true
-
 -- Cmd hight
 vim.cmdheight = 1
 
@@ -34,7 +31,6 @@ vim.opt.ignorecase = true
 -- Colors & theme
 vim.opt.termguicolors = true
 vim.cmd("colorscheme catppuccin-mocha")
-vim.cmd.colorscheme = "catppuccin-mocha"
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "NvimTreeNormal", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalFloant", { bg = "none" })
@@ -49,6 +45,10 @@ vim.fn.sign_define('DiagnosticSignWarn', { text = '', texthl = 'DiagnosticSig
 vim.fn.sign_define('DiagnosticSignInfo', { text = '', texthl = 'DiagnosticSignInfo' })
 vim.fn.sign_define('DiagnosticSignHint', { text = '', texthl = 'DiagnosticSignHint' })
 
+vim.opt.nu = true
+vim.opt.relativenumber = true
+vim.opt.hlsearch = true
+vim.opt.incsearch = true
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.title = true
 vim.opt.showcmd = true
@@ -56,6 +56,7 @@ vim.opt.cmdheight = 1
 vim.opt.laststatus = 2
 vim.opt.scrolloff = 10
 vim.opt.shell = 'zsh'
+vim.opt.colorcolumn = "80"
 vim.opt.inccommand = 'split'
 vim.opt.breakindent = true
 vim.opt.wrap = false         -- No Wrap lines

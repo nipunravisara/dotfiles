@@ -2,7 +2,9 @@ import:
   - ~/.config/alacritty/colors.yml
 
 cursor:
-  style: Block
+  style:
+    blinking: Always
+    blink_interval: 50
 
 window:
   dimensions:

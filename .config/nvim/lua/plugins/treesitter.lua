@@ -1,9 +1,9 @@
 local setup, treesitter = pcall(require, "nvim-treesitter.configs")
 if not setup then
-    return
+  return
 end
 
-treesitter.setup ({
+treesitter.setup({
   highlight = {
     enable = true,
     disable = {},
@@ -15,6 +15,7 @@ treesitter.setup ({
   ensure_installed = {
     "markdown",
     "markdown_inline",
+    "javascript",
     "tsx",
     "typescript",
     "toml",
@@ -33,7 +34,10 @@ treesitter.setup ({
   context_commentstring = {
     enable         = true,
     enable_autocmd = false,
-  }
+  },
+  sync_install = true,
+  auto_install = true,
+  additional_vim_regex_highlighting = false
 })
 
 local parser_config = require "nvim-treesitter.parsers".get_parser_configs()

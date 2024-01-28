@@ -22,7 +22,7 @@ export PATH=$PATH:$ANDROID_HOME/build-tools/31.0.0/
 export PATH=$PATH:$HOME/aseprite/build/bin
 
 # Java home
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
 
 # Flutter
 export PATH="$PATH:$HOME/fvm/default/bin"
