@@ -1,65 +1,54 @@
-vim.cmd("autocmd!")
+-- Set <space> as the leader key
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
 
--- Encordings
-vim.scriptencoding = 'utf-8'
-vim.opt.encoding = 'utf-8'
-vim.opt.fileencoding = 'utf-8'
+-- Set highlight on search
+vim.o.hlsearch = false
 
--- Cmd hight
-vim.cmdheight = 1
+-- Make line numbers default
+vim.wo.number = true
 
--- Indents and tabs
-vim.opt.tabstop = 2
-vim.opt.softtabstop = 2
-vim.opt.shiftwidth = 2
-vim.opt.expandtab = true
-vim.opt.smartindent = true
-vim.opt.autoindent = true
-vim.opt.smarttab = true
+-- Enable mouse mode
+vim.o.mouse = 'a'
 
--- Undo history
-vim.opt.swapfile = false
-vim.opt.backup = false
---vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
-vim.opt.undofile = true
+-- Sync clipboard between OS and Neovim.
+vim.o.clipboard = 'unnamedplus'
 
--- Search
-vim.opt.hlsearch = false
-vim.opt.incsearch = true
-vim.opt.ignorecase = true
+-- Enable break indent
+vim.o.breakindent = true
 
--- Colors & theme
-vim.opt.termguicolors = true
-vim.cmd("colorscheme catppuccin-mocha")
+-- Save undo history
+vim.o.undofile = true
+
+-- Case-insensitive searching UNLESS \C or capital in search
+vim.o.ignorecase = true
+vim.o.smartcase = true
+
+-- Keep signcolumn on by default
+vim.wo.signcolumn = 'yes'
+
+-- Decrease update time
+vim.o.updatetime = 250
+vim.o.timeoutlen = 300
+
+-- Set completeopt to have a better completion experience
+vim.o.completeopt = 'menuone,noselect'
+
+-- NOTE: You should make sure your terminal supports this
+vim.o.termguicolors = true
+
+-- Set default theme
+vim.cmd.colorscheme "catppuccin"
+
+-- remove background color so it's looks cool
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-vim.api.nvim_set_hl(0, "NvimTreeNormal", { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalFloant", { bg = "none" })
-vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
-vim.api.nvim_set_hl(0, "DiagnosticVirtualTextInfo", { bg = "none" })
-vim.api.nvim_set_hl(0, "DiagnosticVirtualTextHint", { bg = "none" })
 
--- Icons
-vim.fn.sign_define('DiagnosticSignError', { text = '', texthl = 'DiagnosticSignError' })
-vim.fn.sign_define('DiagnosticSignWarn', { text = '', texthl = 'DiagnosticSignWarn' })
-vim.fn.sign_define('DiagnosticSignInfo', { text = '', texthl = 'DiagnosticSignInfo' })
-vim.fn.sign_define('DiagnosticSignHint', { text = '', texthl = 'DiagnosticSignHint' })
-
-vim.opt.nu = true
-vim.opt.relativenumber = true
-vim.opt.hlsearch = true
-vim.opt.incsearch = true
-vim.opt.clipboard = 'unnamedplus'
-vim.opt.title = true
-vim.opt.showcmd = true
-vim.opt.cmdheight = 1
-vim.opt.laststatus = 2
-vim.opt.scrolloff = 10
-vim.opt.shell = 'zsh'
-vim.opt.colorcolumn = "80"
-vim.opt.inccommand = 'split'
-vim.opt.breakindent = true
-vim.opt.wrap = false         -- No Wrap lines
-vim.opt.backspace = { 'start', 'eol', 'indent' }
-vim.opt.path:append { '**' } -- Finding files - Search down into subfolders
-vim.opt.wildignore:append { '*/node_modules/*' }
+-- [[ Highlight on yank ]]
+local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
+vim.api.nvim_create_autocmd('TextYankPost', {
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+  group = highlight_group,
+  pattern = '*',
+})

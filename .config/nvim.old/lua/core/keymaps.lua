@@ -54,6 +54,7 @@ keymap.set("n", "<leader>p", vim.cmd.UltiSnipsExpandTrigger)
 -- Telescope
 keymap.set("n", "<leader>ff", telescope_builtin.find_files, {})
 keymap.set('n', '<leader>fg', telescope_builtin.live_grep, {})
+keymap.set('n', '<leader>bf', telescope_builtin.buffers, {})
 
 -- Undotree
 keymap.set("n", "<leader>uu", vim.cmd.UndotreeToggle)
