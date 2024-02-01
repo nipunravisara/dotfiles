@@ -40,8 +40,15 @@ vim.o.termguicolors = true
 -- Set default theme
 vim.cmd.colorscheme "catppuccin"
 
--- remove background color so it's looks cool
+-- remove theme bg colors
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NvimTreeNormal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalFloant", { bg = "none" })
+vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+vim.api.nvim_set_hl(0, "DiagnosticVirtualTextInfo", { bg = "none" })
+vim.api.nvim_set_hl(0, "DiagnosticVirtualTextHint", { bg = "none" })
+vim.api.nvim_set_hl(0, "DiagnosticVirtualTextWarn", { bg = "none", fg="#fab387" })
 
 -- [[ Highlight on yank ]]
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
