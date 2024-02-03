@@ -1,10 +1,2 @@
-require('core.base')
-require('core.plugins')
-require('core.remaps')
-
-require('plugins.lsp')
-require('plugins.mason')
-require('plugins.nvim-cmp')
-require('plugins.which-key')
-require('plugins.telescope')
-require('plugins.treesitter')
+require("zenin.core")
+require("zenin.lazy")
