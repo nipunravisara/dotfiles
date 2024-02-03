@@ -31,4 +31,4 @@ export PATH="$PATH:$HOME/fvm/default/bin"
 export PATH=$PATH:/opt/homebrew/lib/python3.11/site-packages
 
 #Start tmux
-[ -z "$TMUX"  ] && { exec tmux new-session && exit;}
+# [ -z "$TMUX"  ] && { exec tmux new-session && exit;}
