@@ -3,6 +3,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # Theme
 ZSH_THEME="robbyrussell"
+PROMPT='%c %F{cyan}% ⩥ %f'
 
 # Plugins
 plugins=(git)
