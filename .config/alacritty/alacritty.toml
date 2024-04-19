@@ -6,21 +6,24 @@ import = [
 style = { shape =  "Block", blinking = "Always" }
 
 [colors]
-cursor = { text = "#4c4f69", cursor = "#df8e1d" }
+cursor = { text = "#4c4f69", cursor = "#00ff73" }
 
 [font]
-size = 13.0
+size = 14.0
 
 [font.bold]
-family = "FiraCode Nerd Font"
+# family = "FiraCode Nerd Font"
+family = "JetBrainsMono Nerd Font Mono"
 style = "Bold"
 
 [font.italic]
-family = "FiraCode Nerd Font"
+# family = "FiraCode Nerd Font"
+family = "JetBrainsMono Nerd Font Mono"
 style = "Italic"
 
 [font.normal]
-family = "FiraCode Nerd Font"
+# family = "FiraCode Nerd Font"
+family = "JetBrainsMono Nerd Font Mono"
 style = "Regular"
 
 [font.offset]
@@ -32,7 +35,7 @@ history = 50000
 
 [window]
 decorations = "Buttonless"
-padding = { x = 25, y = 25 }
+# padding = { x = 25, y = 25 }
 dynamic_padding = true
 opacity = 0.7
 blur = true
