@@ -1,9 +1,6 @@
 <p align="center">
   <h2 align="center">Dotfiles</h2>
-</p>
-
-<p align="center">
-	personalized system files
+  <p align="center"><sup>⚡ Personalized system files ⚡</sup></p>
 </p>
 
 <p align="center">
