@@ -16,7 +16,6 @@ Your dotfiles are how you personalize your system. This repository holds all of 
 
 ![yabai-macos-setup](https://raw.githubusercontent.com/nipunravisara/dotfiles/main/.local/screenshots/ss0.png)
 
-
 ## What's inside
 
 - **zsh**: interactive login shell and as a command interpreter.
@@ -28,13 +27,12 @@ Your dotfiles are how you personalize your system. This repository holds all of 
 - **ranger**: vim-inspired filemanager.
 - **nvim**: hyperextensible Vim-based text editor.
 
-
 ## Getting started
 
-If you're planning to install and setup above packages and personalize it as you want it's gonna take time. I have setup a [installation script](https://gist.github.com/nipunravisara/77cd3908fad48799011c37ba21050c63) for easy use. after setup you can configure each package as you want by editing config files located inside `.config/<package-name>`.
+If you're planning to install and setup above packages and personalize it as you want it's gonna take time. I have setup a [installation script](https://gist.github.com/nipunravisara/985a01f9dc7fe3c5d780e99c4592d7dd) for easy use. after setup you can configure each package as you want by editing config files located inside `.config/<package-name>`.
 
 ```sh
-bash <(curl -sL https://gist.github.com/nipunravisara/77cd3908fad48799011c37ba21050c63/raw/setup.sh)
+bash <(curl -sL https://gist.github.com/nipunravisara/985a01f9dc7fe3c5d780e99c4592d7dd/raw/setup.sh)
 ```
 
 > [!IMPORTANT]  
@@ -46,6 +44,7 @@ bash <(curl -sL https://gist.github.com/nipunravisara/77cd3908fad48799011c37ba21
 ![yabai-macos-setup](https://raw.githubusercontent.com/nipunravisara/dotfiles/main/.local/screenshots/ss2.png)
 <br/>
 <br/>
+
 <div align="center">
 Happy ricing 🤘
 </div>
