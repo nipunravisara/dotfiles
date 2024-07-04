@@ -10,12 +10,11 @@ return {
   config = function()
     local telescope = require("telescope")
     local actions = require("telescope.actions")
-    local telescope_builtin = require("telescope.builtin")
-    local telescope_themes = require("telescope.themes")
     local transform_mod = require("telescope.actions.mt").transform_mod
-
+    local telescope_builtin = require("telescope.builtin")
     local trouble = require("trouble")
-    local trouble_telescope = require("trouble.providers.telescope")
+    local telescope_themes = require("telescope.themes")
+    local trouble_telescope = require("trouble.sources.telescope").open
 
     -- or create your custom action
     local custom_actions = transform_mod({
@@ -32,7 +31,7 @@ return {
             ["<C-k>"] = actions.move_selection_previous, -- move to prev result
             ["<C-j>"] = actions.move_selection_next, -- move to next result
             ["<C-q>"] = actions.send_selected_to_qflist + custom_actions.open_trouble_qflist,
-            ["<C-t>"] = trouble_telescope.smart_open_with_trouble,
+            ["<C-t>"] = trouble_telescope,
           },
         },
       },
@@ -49,7 +48,7 @@ return {
 
     -- set keymaps
     local keymap = vim.keymap -- for conciseness
-    
+
     keymap.set("n", "<leader>s/", telescope_live_grep_open_files, { desc = "[S]earch [/] in Open Files" })
     keymap.set("n", "<leader>ss", telescope_builtin.builtin, { desc = "[S]earch [S]elect Telescope" })
     keymap.set("n", "<leader>gf", telescope_builtin.git_files, { desc = "Search [G]it [F]iles" })

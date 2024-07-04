@@ -133,4 +133,5 @@ return {
       end,
     })
   end,
-    require('ufo').setup(opts)
+}
+

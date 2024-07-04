@@ -1,2 +1,2 @@
-require("nipun.core")
-require("nipun.lazy")
+require("zenin.core")
+require("zenin.lazy")

@@ -4,7 +4,6 @@ return {
   opts = {
     on_attach = function(bufnr)
       local gs = package.loaded.gitsigns
-      local d = ""
 
       local function map(mode, l, r, desc)
         vim.keymap.set(mode, l, r, { buffer = bufnr, desc = desc })
@@ -29,7 +28,7 @@ return {
 
       map("n", "<leader>hu", gs.undo_stage_hunk, "Undo stage hunk")
 
-      map("n", "<leader>ph", gs.preview_hunk, "Preview hunk")
+      map("n", "<leader>hp", gs.preview_hunk, "Preview hunk")
 
       map("n", "<leader>hb", function()
         gs.blame_line({ full = true })
