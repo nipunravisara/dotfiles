@@ -21,7 +21,7 @@ Your dotfiles are how you personalize your system. This repository holds all of 
 - **zsh**: interactive login shell and as a command interpreter.
 - **oh My Zsh**: framework for managing zsh configuration
 - **tmux**: terminal multiplexer.
-- **yabai**: tiling window manager.
+- **aeroSpace**: tiling window manager.
 - **skhd**: simple hotkey daemon.
 - **alacritty**: GPU accelerated terminal emulator.
 - **ranger**: vim-inspired filemanager.
