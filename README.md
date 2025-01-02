@@ -32,7 +32,7 @@ Your dotfiles are how you personalize your system. This repository holds all of 
 If you're planning to install and setup above packages and personalize it as you want it's gonna take time. I have setup a [installation script](https://gist.github.com/nipunravisara/985a01f9dc7fe3c5d780e99c4592d7dd) for easy use. after setup you can configure each package as you want by editing config files located inside `.config/<package-name>`.
 
 ```sh
-bash <(curl -sL https://gist.githubusercontent.com/nipunravisara/2adc724c27b8eea67951276b74dfa211/raw/ae4e13e9735fa49fb559359c0404485a1436c7d8/script.sh)
+bash <(curl -sL https://gist.githubusercontent.com/nipunravisara/2adc724c27b8eea67951276b74dfa211/raw/e938a01c9eb95767f88ba35a5a4e6a9c08e0331c/script.sh)
 ```
 
 > [!IMPORTANT]  
