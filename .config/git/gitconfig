@@ -1,15 +1,6 @@
 [user]
 	email = ravisara.dev@gmail.com
-	name = Nipun Ravisara
-
-[includeIf "gitdir:~/devx/du"]
-    path = ~/devx/du/.gitconfig
-
-[includeIf "gitdir:~/devx/peoplesPay"]
-    path = ~/devx/peoplesPay/.gitconfig
-
-[includeIf "gitdir:~/devx/asec"]
-    path = ~/devx/asec/.gitconfig
+	name = nipunravisara
 
 [alias]
 	st = status
