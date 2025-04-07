@@ -1,5 +1,6 @@
-general.import = [
-    "~/.config/alacritty/themes/themes/tokyo-night.toml"
+[general]
+import = [
+    "~/.config/alacritty/themes/themes/ayu_mirage.toml"
 ]
 
 [env]
