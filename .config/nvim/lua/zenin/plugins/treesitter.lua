@@ -10,17 +10,11 @@ return {
 		local treesitter = require("nvim-treesitter.configs")
 
 		-- configure treesitter
-		treesitter.setup({ -- enable syntax highlighting
-			highlight = {
-				enable = true,
-			},
-			-- enable indentation
-			indent = { enable = true },
-			-- enable autotagging (w/ nvim-ts-autotag plugin)
-			autotag = {
-				enable = true,
-			},
-			-- ensure these language parsers are installed
+		treesitter.setup({
+			modules = {},
+			auto_install = true,
+			sync_install = true,
+			ignore_install = {},
 			ensure_installed = {
 				"json",
 				"javascript",
@@ -34,6 +28,7 @@ return {
 				"markdown_inline",
 				"svelte",
 				"graphql",
+				"python",
 				"bash",
 				"lua",
 				"vim",
@@ -43,6 +38,17 @@ return {
 				"vimdoc",
 				"c",
 			},
+			--enable highlight
+			highlight = {
+				enable = true,
+			},
+			-- enable indentation
+			indent = { enable = true },
+			-- enable autotagging (w/ nvim-ts-autotag plugin)
+			autotag = {
+				enable = true,
+			},
+			-- ensure these language parsers are installed
 			incremental_selection = {
 				enable = true,
 				keymaps = {
@@ -53,8 +59,6 @@ return {
 				},
 			},
 			ui = {
-				-- If you are using a Nerd Font: set icons to an empty table which will use the
-				-- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
 				icons = vim.g.have_nerd_font and {} or {
 					cmd = "⌘",
 					config = "🛠",
