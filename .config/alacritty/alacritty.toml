@@ -4,7 +4,7 @@ import = [
 ]
 
 [env]
-TERM = "xterm-256color"
+TERM = "alacritty-direct"
 
 [cursor]
 style = { shape =  "Block", blinking = "Always" }
@@ -33,7 +33,7 @@ history = 50000
 
 [window]
 decorations = "Buttonless"
-padding = { x = 5, y = 5 }
+padding = { x = 15, y = 5 }
 dynamic_padding = true
-opacity = 0.8 
-blur = true
+opacity = 0.7 
+blur = true 

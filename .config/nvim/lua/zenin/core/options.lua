@@ -42,7 +42,7 @@ opt.swapfile = false
 -- fold
 vim.opt.foldmethod = "expr" -- Use expression-based folding
 vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()" -- Tree-sitter for fold computation
-vim.opt.foldcolumn = "2" -- Narrow fold column like VS Code's gutter
+vim.opt.foldcolumn = "0" -- Narrow fold column like VS Code's gutter
 vim.opt.foldnestmax = 10 -- Allow deeper folds (VS Code handles nested code well)
 vim.opt.foldlevelstart = 99 -- Start with all folds open (VS Code default)
 vim.opt.foldenable = true -- Enable folding
