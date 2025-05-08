@@ -2,10 +2,11 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap
 local vimApi = vim.api
+local vimCmd = vim.cmd
 
 keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
-
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
+keymap.set("n", "<leader>U", "<cmd>UndotreeToggle<CR> <cmd>UndotreeFocus<CR>", { desc = "Open undo history" })
 
 -- increment/decrement numbers
 keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" }) -- increment

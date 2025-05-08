@@ -7,44 +7,59 @@ opt.number = true
 vim.o.completeopt = "menuone,noselect"
 
 -- tabs & indentation
-opt.tabstop = 2 -- 2 spaces for tabs (prettier default)
-opt.shiftwidth = 2 -- 2 spaces for indent width
-opt.expandtab = true -- expand tab to spaces
-opt.autoindent = true -- copy indent from current line when starting new one
+opt.tabstop = 2
+opt.softtabstop = 2
+opt.shiftwidth = 2
+opt.expandtab = true
+opt.autoindent = true
 
+-- stop code wrap
 opt.wrap = false
 
 -- search settings
-opt.ignorecase = true -- ignore case when searching
-opt.smartcase = true -- if you include mixed case in your search, assumes you want case-sensitive
+opt.ignorecase = true
+opt.smartcase = true
 
-opt.cursorline = true
+opt.cursorline = false
 
 -- turn on termguicolors for tokyonight colorscheme to work
--- (have to use iterm2 or any other true color terminal)
 opt.termguicolors = true
-opt.background = "dark" -- colorschemes that can be light or dark will be made dark
-opt.signcolumn = "yes" -- show sign column so that text doesn't shift
+opt.background = "dark"
+opt.signcolumn = "yes"
+
+-- handle undo
+-- opt.swapfile = false
+-- opt.backup = false
+-- opt.undodir = os.getenv("HOME") .. ".vim/undodir"
+-- opt.undofile = true
+
+-- space from bottom
+opt.scrolloff = 8
+opt.signcolumn = "yes"
+opt.isfname:append("@-@")
+
+opt.updatetime = 50
+opt.colorcolumn = "0"
 
 -- backspace
-opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or insert mode start position
+opt.backspace = "indent,eol,start"
 
 -- clipboard
-opt.clipboard:append("unnamedplus") -- use system clipboard as default register
+opt.clipboard:append("unnamedplus")
 
 -- split windows
-opt.splitright = true -- split vertical window to the right
-opt.splitbelow = true -- split horizontal window to the bottom
+opt.splitright = true
+opt.splitbelow = true
 
 -- turn off swapfile
 opt.swapfile = false
 
 -- fold
-vim.opt.foldmethod = "expr" -- Use expression-based folding
-vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()" -- Tree-sitter for fold computation
-vim.opt.foldcolumn = "0" -- Narrow fold column like VS Code's gutter
-vim.opt.foldnestmax = 10 -- Allow deeper folds (VS Code handles nested code well)
-vim.opt.foldlevelstart = 99 -- Start with all folds open (VS Code default)
-vim.opt.foldenable = true -- Enable folding
-vim.opt.foldtext =
-	[[substitute(getline(v:foldstart),'\\t\\| \\s*', '', 'g') . ' ... (' . (v:foldend - v:foldstart + 1) . ' lines)']] -- Clean fold text
+opt.foldmethod = "expr"
+opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+opt.foldcolumn = "0"
+opt.foldnestmax = 10
+opt.foldlevelstart = 99
+opt.foldenable = true
+opt.foldtext =
+    [[substitute(getline(v:foldstart),'\\t\\| \\s*', '', 'g') . ' ... (' . (v:foldend - v:foldstart + 1) . ' lines)']]
