@@ -1,25 +1,32 @@
 return {
-	"nvim-lualine/lualine.nvim",
-	dependencies = { "nvim-tree/nvim-web-devicons" },
-	config = function()
-		local lualine = require("lualine")
-		local lazy_status = require("lazy.status")
-		lualine.setup({
-			options = {
-				theme = "ayu",
-			},
-			sections = {
-				lualine_x = {
-					{
-						lazy_status.updates,
-						cond = lazy_status.has_updates,
-						color = { fg = "#ff9e64" },
-					},
-					{ "encoding" },
-					{ "fileformat" },
-					{ "filetype" },
-				},
-			},
-		})
-	end,
+    "nvim-lualine/lualine.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    config = function()
+        local lualine = require("lualine")
+        local onedark = require("lualine.themes.onedark")
+
+        onedark.normal.c.bg = "#ffff"
+
+        lualine.setup({
+            options = {
+                theme = onedark,
+                component_separators = { left = "", right = "" },
+                section_separators = { left = " ", right = " " },
+            },
+
+            sections = {
+                lualine_a = {
+                    {
+                        "mode",
+                        fmt = function(str)
+                            return "⚡️" .. str
+                        end,
+                    },
+                },
+                lualine_b = { "branch", "diff" },
+                lualine_x = { "diagnostics" },
+                lualine_z = { "lsp_status" },
+            },
+        })
+    end,
 }
