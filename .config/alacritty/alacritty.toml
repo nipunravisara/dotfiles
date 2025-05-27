@@ -1,6 +1,6 @@
 [general]
 import = [
-    "~/.config/alacritty/themes/themes/ayu_mirage.toml"
+    "~/.config/alacritty/themes/themes/one_dark.toml"
 ]
 
 [env]
@@ -35,5 +35,5 @@ history = 50000
 decorations = "Buttonless"
 padding = { x = 15, y = 5 }
 dynamic_padding = true
-opacity = 0.7 
+opacity = 0.95 
 blur = true 
