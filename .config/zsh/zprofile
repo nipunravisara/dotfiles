@@ -3,7 +3,7 @@ export EDITOR="nvim"
 export TERMINAL="alacritty"
 
 # Homebrew path
-export PATH=/opt/homebrew/bin:$PATH
+export PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"
 
 # NVM path
 export NVM_DIR="$HOME/.nvm"
@@ -27,9 +27,7 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
 # Flutter
 export PATH="$PATH:$HOME/fvm/default/bin"
 
-# Pywal
-export PATH=$PATH:/opt/homebrew/lib/python3.11/site-packages
-
+# Starship 
 source /opt/homebrew/opt/spaceship/spaceship.zsh
 
 #Start tmux
