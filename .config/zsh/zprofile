@@ -30,7 +30,6 @@ export PATH="$PATH:$HOME/fvm/default/bin"
 # Pywal
 export PATH=$PATH:/opt/homebrew/lib/python3.11/site-packages
 
-. "$HOME/.local/bin/env"
 source /opt/homebrew/opt/spaceship/spaceship.zsh
 
 #Start tmux
