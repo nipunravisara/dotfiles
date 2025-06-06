@@ -7,7 +7,6 @@ return {
         { "WhoIsSethDaniel/mason-tool-installer.nvim" },
     },
     config = function()
-        local keymap = vim.keymap
         local mason = require("mason")
         local mason_lspconfig = require("mason-lspconfig")
         local mason_tool_installer = require("mason-tool-installer")
@@ -61,12 +60,17 @@ return {
         -- Configure LSP servers
         for _, server_name in ipairs(default_lsp_servers) do
             local server_config = {
+                on_attach = mason_lspconfig.on_attach,
                 capabilities = capabilities,
             }
 
             -- Custom configuration for specific servers
             if server_name == "graphql" then
                 server_config.filetypes = { "graphql", "gql", "typescriptreact", "javascriptreact" }
+            elseif server_name == "pyright" then
+                server_config.filetypes = {
+                    "python",
+                }
             elseif server_name == "emmet_ls" then
                 server_config.filetypes = {
                     "html",
