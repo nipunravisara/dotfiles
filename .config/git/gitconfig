@@ -11,3 +11,6 @@
 [http]
 	postBuffer = 157286400
 	sslVerify = false
+
+[includeIf "gitdir:~/Workstation/"]
+    path = ~/.gitconfigw
