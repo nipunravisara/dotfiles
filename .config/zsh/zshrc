@@ -16,6 +16,20 @@ source $HOME/.config/zsh/alias
 # Envs
 source $HOME/.config/zsh/envs
 
+export PATH="$PATH:/usr/local/bin"
+
 # Spaceship
 source "/opt/homebrew/opt/spaceship/spaceship.zsh"
 
+
+# Added by Antigravity
+export PATH="/Users/zenin/.antigravity/antigravity/bin:$PATH"
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+export PATH=$PATH:$HOME/go/bin
+export PATH=$PATH:$HOME/go/bin
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

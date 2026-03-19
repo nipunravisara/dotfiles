@@ -29,6 +29,8 @@ export PATH="$PATH:$HOME/fvm/default/bin"
 
 # Starship 
 source /opt/homebrew/opt/spaceship/spaceship.zsh
+source ~/.config/envman/PATH.env
 
+export PATH="$HOME/.local/bin:$PATH"
 #Start tmux
 # [ -z "$TMUX"  ] && { exec tmux new-session && exit;}
