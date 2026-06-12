@@ -7,6 +7,8 @@ plugins=(git)
 # Oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
+ZSH_THEME="cypher"
+
 # profile
 source $HOME/.config/zsh/zprofile
 
@@ -17,10 +19,6 @@ source $HOME/.config/zsh/alias
 source $HOME/.config/zsh/envs
 
 export PATH="$PATH:/usr/local/bin"
-
-# Spaceship
-source "/opt/homebrew/opt/spaceship/spaceship.zsh"
-
 
 # Added by Antigravity
 export PATH="/Users/zenin/.antigravity/antigravity/bin:$PATH"
@@ -33,3 +31,5 @@ export PATH=$PATH:$HOME/go/bin
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+eval "$(starship init zsh)"
