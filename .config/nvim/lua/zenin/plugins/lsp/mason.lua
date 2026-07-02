@@ -10,7 +10,6 @@ return {
         local mason = require("mason")
         local mason_lspconfig = require("mason-lspconfig")
         local mason_tool_installer = require("mason-tool-installer")
-        local lspconfig = require("lspconfig")
         local cmp_nvim_lsp = require("cmp_nvim_lsp")
         local capabilities = cmp_nvim_lsp.default_capabilities()
         local default_lsp_servers = {
@@ -55,10 +54,14 @@ return {
             run_on_start = true,
         })
 
+        -- Apply shared defaults to every server
+        vim.lsp.config("*", {
+            capabilities = capabilities,
+        })
+
         -- Configure LSP servers
         for _, server_name in ipairs(default_lsp_servers) do
             local server_config = {
-                on_attach = mason_lspconfig.on_attach,
                 capabilities = capabilities,
             }
 
@@ -100,7 +103,7 @@ return {
                     },
                 }
             end
-            lspconfig[server_name].setup(server_config)
+            vim.lsp.config(server_name, server_config)
         end
     end,
 }

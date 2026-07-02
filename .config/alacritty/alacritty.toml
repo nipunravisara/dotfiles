@@ -1,7 +1,7 @@
 [general]
-import = [
-    "~/.config/alacritty/themes/themes/one_dark.toml"
-]
+#import = [
+#    "~/.config/alacritty/themes/themes/carbonfox.toml"
+#]
 
 [env]
 TERM = "alacritty-direct"
