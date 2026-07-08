@@ -1,5 +1,6 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
+	branch = "master",
 	event = { "BufReadPre", "BufNewFile" },
 	build = ":TSUpdate",
 	dependencies = {
@@ -8,6 +9,9 @@ return {
 	config = function()
 		-- import nvim-treesitter plugin
 		local treesitter = require("nvim-treesitter.configs")
+
+		-- autotagging is configured via nvim-ts-autotag's own setup
+		require("nvim-ts-autotag").setup()
 
 		-- configure treesitter
 		treesitter.setup({
@@ -44,10 +48,6 @@ return {
 			},
 			-- enable indentation
 			indent = { enable = true },
-			-- enable autotagging (w/ nvim-ts-autotag plugin)
-			autotag = {
-				enable = true,
-			},
 			-- ensure these language parsers are installed
 			incremental_selection = {
 				enable = true,

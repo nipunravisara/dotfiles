@@ -1,7 +1,7 @@
 [general]
-#import = [
-#    "~/.config/alacritty/themes/themes/carbonfox.toml"
-#]
+import = [
+   "~/.config/alacritty/themes/themes/nightfly.toml"
+]
 
 [env]
 TERM = "alacritty-direct"
@@ -35,5 +35,5 @@ history = 50000
 decorations = "Buttonless"
 padding = { x = 15, y = 5 }
 dynamic_padding = true
-opacity = 0.95 
+opacity = 0.80 
 blur = true 

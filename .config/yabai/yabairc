@@ -18,7 +18,7 @@ yabai -m config layout bsp
 yabai -m config window_placement second_child
 
 # Set all padding and gaps to 10pt (default: 0)
-yabai -m config top_padding    10
+yabai -m config top_padding    35
 yabai -m config bottom_padding 10
 yabai -m config left_padding   10
 yabai -m config right_padding  10
