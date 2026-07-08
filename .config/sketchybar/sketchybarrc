@@ -1,0 +1,193 @@
+#!/bin/bash
+# SketchyBar — Catppuccin Mocha, colorful-pill layout.
+# Left:  Apple · workspaces · focused app
+# Right: network · cpu/ram/ssd · wifi · volume · brightness · clock · battery
+
+PLUGIN_DIR="$CONFIG_DIR/plugins"
+source "$CONFIG_DIR/colors.sh"
+
+FONT="JetBrainsMono Nerd Font"
+APP_FONT="sketchybar-app-font"
+
+##### Bar #####
+sketchybar --bar position=top \
+                 height=32 \
+                 color=$TRANSPARENT \
+                 corner_radius=0 \
+                 y_offset=0 \
+                 margin=0 \
+                 padding_left=8 \
+                 padding_right=8 \
+                 blur_radius=20 \
+                 shadow=off \
+                 display=main \
+                 topmost=off \
+                 sticky=on
+
+##### Defaults (pill look) #####
+sketchybar --default \
+           updates=when_shown \
+           animator_duration=15 \
+           icon.font="$FONT:Bold:14.0" \
+           icon.color=$TEXT \
+           icon.padding_left=8 \
+           icon.padding_right=4 \
+           label.font="$FONT:Bold:13.0" \
+           label.color=$TEXT \
+           label.padding_left=2 \
+           label.padding_right=8 \
+           background.height=24 \
+           background.corner_radius=6 \
+           background.color=$SURFACE2 \
+           padding_left=3 \
+           padding_right=3
+
+###############################################################
+# LEFT
+###############################################################
+
+# Logo (🐙, transparent box)
+sketchybar --add item apple left \
+           --set apple icon="🐙" \
+                       icon.font="Apple Color Emoji:Regular:15.0" \
+                       icon.padding_left=8 \
+                       icon.padding_right=8 \
+                       label.drawing=off \
+                       background.drawing=off \
+                       click_script="sketchybar --reload"
+
+# Workspaces (yabai spaces 1..6)
+SPACE_SIDS=(1 2 3 4 5 6)
+for sid in "${SPACE_SIDS[@]}"; do
+  sketchybar --add space space.$sid left \
+             --set space.$sid space=$sid \
+                              icon=$sid \
+                              icon.font="$FONT:Bold:13.0" \
+                              icon.color=$SUBTEXT \
+                              icon.padding_left=9 \
+                              icon.padding_right=9 \
+                              label.drawing=off \
+                              background.drawing=on \
+                              background.color=$SURFACE2 \
+                              background.corner_radius=6 \
+                              background.height=24 \
+                              click_script="yabai -m space --focus $sid 2>/dev/null" \
+                              script="$PLUGIN_DIR/space.sh" \
+             --subscribe space.$sid space_change
+done
+
+# Focused application (orange pill, app-font glyph)
+sketchybar --add item front_app left \
+           --set front_app icon.font="$APP_FONT:Regular:16.0" \
+                           icon.color=$ON_ACCENT \
+                           label.color=$ON_ACCENT \
+                           label.font="$FONT:Bold:13.0" \
+                           background.color=$PEACH \
+                           padding_left=6 \
+                           script="$PLUGIN_DIR/front_app.sh" \
+           --subscribe front_app front_app_switched
+
+###############################################################
+# RIGHT  (added right-to-left: first added = rightmost)
+###############################################################
+
+# --- Battery (rightmost) ---
+sketchybar --add item battery right \
+           --set battery icon="󰁹" \
+                         icon.color=$GREEN \
+                         background.color=$SURFACE2 \
+                         update_freq=60 \
+                         script="$PLUGIN_DIR/battery.sh" \
+           --subscribe battery system_woke power_source_change
+
+# --- Clock (blue pill) ---
+sketchybar --add item clock right \
+           --set clock icon="" \
+                       icon.color=$ON_ACCENT \
+                       label.color=$ON_ACCENT \
+                       background.color=$SAPPHIRE \
+                       update_freq=1 \
+                       script="$PLUGIN_DIR/clock.sh"
+
+# --- Volume (blue pill) ---
+sketchybar --add item volume right \
+           --set volume icon="󰕾" \
+                        icon.color=$ON_ACCENT \
+                        label.color=$ON_ACCENT \
+                        background.color=$BLUE \
+                        update_freq=15 \
+                        script="$PLUGIN_DIR/volume.sh" \
+           --subscribe volume volume_change
+
+# --- Wi-Fi / network name (pink pill) ---
+sketchybar --add item wifi right \
+           --set wifi icon="󰖩" \
+                      icon.color=$ON_ACCENT \
+                      label.color=$ON_ACCENT \
+                      background.color=$PINK \
+                      update_freq=15 \
+                      script="$PLUGIN_DIR/wifi.sh" \
+                      click_script="open 'x-apple.systempreferences:com.apple.wifi-settings-extension'"
+
+# --- Disk (dark stat) ---
+sketchybar --add item disk right \
+           --set disk icon="SSD" \
+                      icon.font="$FONT:Bold:9.0" \
+                      icon.color=$GREEN \
+                      label.color=$TEXT \
+                      background.color=$SURFACE2 \
+                      update_freq=120 \
+                      script="$PLUGIN_DIR/disk.sh"
+
+# --- RAM (dark stat) ---
+sketchybar --add item ram right \
+           --set ram icon="RAM" \
+                     icon.font="$FONT:Bold:9.0" \
+                     icon.color=$YELLOW \
+                     label.color=$TEXT \
+                     background.color=$SURFACE2 \
+                     padding_right=0 \
+                     update_freq=3 \
+                     script="$PLUGIN_DIR/ram.sh"
+
+# --- CPU (dark stat) ---
+sketchybar --add item cpu right \
+           --set cpu icon="CPU" \
+                     icon.font="$FONT:Bold:9.0" \
+                     icon.color=$RED \
+                     label.color=$TEXT \
+                     background.color=$SURFACE2 \
+                     padding_right=0 \
+                     update_freq=3 \
+                     script="$PLUGIN_DIR/cpu.sh"
+
+# --- Network up (dark pill) ---
+sketchybar --add item network.upload right \
+           --set network.upload icon="↑" \
+                                icon.font="$FONT:Bold:13.0" \
+                                icon.color=$RED \
+                                label.color=$TEXT \
+                                label.font="$FONT:Bold:11.0" \
+                                background.color=$SURFACE2 \
+                                padding_right=0
+
+# --- Network down (dark pill) — this item drives the script for both ---
+sketchybar --add item network.download right \
+           --set network.download icon="↓" \
+                                  icon.font="$FONT:Bold:13.0" \
+                                  icon.color=$GREEN \
+                                  label.color=$TEXT \
+                                  label.font="$FONT:Bold:11.0" \
+                                  background.color=$SURFACE2 \
+                                  padding_right=0 \
+                                  update_freq=2 \
+                                  script="$PLUGIN_DIR/network.sh"
+
+###############################################################
+# yabai signals (keep left side reactive)
+###############################################################
+yabai -m signal --add event=space_changed action="sketchybar --trigger space_change" 2>/dev/null
+yabai -m signal --add event=window_focused action="sketchybar --trigger front_app_switched INFO=\"\$(yabai -m query --windows --window | jq -r '.app // \"Finder\"')\"" 2>/dev/null
+
+sketchybar --update
+echo "sketchybar configuration loaded."
