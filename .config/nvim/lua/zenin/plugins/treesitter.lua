@@ -10,6 +10,16 @@ return {
 		-- import nvim-treesitter plugin
 		local treesitter = require("nvim-treesitter.configs")
 
+		-- The archived master branch registers its custom query predicates and
+		-- directives with the pre-0.11 single-node match format (`all = false`),
+		-- which Neovim 0.12 removed: handlers now always receive a list of nodes
+		-- per capture. Without this shim, parsing any buffer whose queries use
+		-- them (e.g. markdown code fences via #set-lang-from-info-string!) fails
+		-- with "attempt to call method 'range' (a nil value)".
+		if vim.fn.has("nvim-0.12") == 1 then
+			require("zenin.treesitter-compat").fix_query_predicates()
+		end
+
 		-- autotagging is configured via nvim-ts-autotag's own setup
 		require("nvim-ts-autotag").setup()
 

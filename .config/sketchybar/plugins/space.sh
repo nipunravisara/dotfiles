@@ -3,13 +3,11 @@
 source "$CONFIG_DIR/colors.sh"
 
 if [ "$SELECTED" = "true" ]; then
-  sketchybar --set "$NAME" background.drawing=on \
-                           background.color="$MAUVE" \
-                           icon.color="$ON_ACCENT" \
-                           label.color="$ON_ACCENT"
+  sketchybar --set "$NAME" background.drawing=off \
+                           icon.color="$MAUVE" \
+                           label.color="$MAUVE"
 else
-  sketchybar --set "$NAME" background.drawing=on \
-                           background.color="$SURFACE2" \
+  sketchybar --set "$NAME" background.drawing=off \
                            icon.color="$SUBTEXT" \
                            label.color="$SUBTEXT"
 fi

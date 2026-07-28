@@ -36,3 +36,6 @@ eval "$(starship init zsh)"
 
 # opencode
 export PATH=/Users/zenin/.opencode/bin:$PATH
+
+# bun completions
+[ -s "/Users/zenin/.bun/_bun" ] && source "/Users/zenin/.bun/_bun"
