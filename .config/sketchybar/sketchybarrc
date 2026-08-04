@@ -10,7 +10,7 @@ FONT="JetBrainsMono Nerd Font"
 
 ##### Bar #####
 sketchybar --bar position=top \
-                 height=32 \
+                 height=28 \
                  color=$TRANSPARENT \
                  corner_radius=0 \
                  y_offset=0 \
@@ -83,6 +83,7 @@ sketchybar --add item battery right \
                          icon.color=$GREEN \
                          update_freq=60 \
                          script="$PLUGIN_DIR/battery.sh" \
+                         click_script="open 'x-apple.systempreferences:com.apple.Battery-Settings.extension'" \
            --subscribe battery system_woke power_source_change
 
 # --- Clock ---
@@ -91,7 +92,8 @@ sketchybar --add item clock right \
                        icon.color=$SAPPHIRE \
                        label.color=$SAPPHIRE \
                        update_freq=1 \
-                       script="$PLUGIN_DIR/clock.sh"
+                       script="$PLUGIN_DIR/clock.sh" \
+                       click_script="open -a Calendar"
 
 # --- Volume ---
 sketchybar --add item volume right \
